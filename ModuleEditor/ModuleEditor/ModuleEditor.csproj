@@ -85,12 +85,25 @@
     <Compile Include="EditorForms\EditorForm.Designer.cs">
       <DependentUpon>EditorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditorForms\LoadModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditorForms\LoadModule.Designer.cs">
+      <DependentUpon>LoadModule.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditorForms\NewModule.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditorForms\NewModule.Designer.cs">
       <DependentUpon>NewModule.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditorForms\SaveModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditorForms\SaveModule.Designer.cs">
+      <DependentUpon>SaveModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditorForms\Tile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
@@ -137,8 +150,14 @@
     <EmbeddedResource Include="EditorForms\EditorForm.resx">
       <DependentUpon>EditorForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditorForms\LoadModule.resx">
+      <DependentUpon>LoadModule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditorForms\NewModule.resx">
       <DependentUpon>NewModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditorForms\SaveModule.resx">
+      <DependentUpon>SaveModule.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
