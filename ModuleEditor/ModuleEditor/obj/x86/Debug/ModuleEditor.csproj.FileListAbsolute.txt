@@ -16,3 +16,9 @@ C:\Users\David\Documents\Visual Studio 2015\Projects\ModuleEditor\ModuleEditor\M
 C:\Users\David\Documents\Visual Studio 2015\Projects\ModuleEditor\ModuleEditor\ModuleEditor\obj\x86\Debug\ModuleEditor.pdb
 C:\Users\David\Documents\Visual Studio 2015\Projects\ModuleEditor\ModuleEditor\ModuleEditor\bin\x86\Debug\ShipGameLibrary.dll
 C:\Users\David\Documents\Visual Studio 2015\Projects\ModuleEditor\ModuleEditor\ModuleEditor\bin\x86\Debug\ShipGameLibrary.pdb
+C:\Users\David\Documents\Visual Studio 2015\Projects\ModuleEditor\ModuleEditor\ModuleEditor\bin\x86\Debug\Content\RectangleTexture.xnb
+C:\Users\David\Documents\Visual Studio 2015\Projects\ModuleEditor\ModuleEditor\ModuleEditor\bin\x86\Debug\Content\Calibri20.xnb
+C:\Users\David\Documents\Visual Studio 2015\Projects\ModuleEditor\ModuleEditor\ModuleEditor\obj\x86\Debug\ModuleEditor.EditorForms.EditorForm.resources
+C:\Users\David\Documents\Visual Studio 2015\Projects\ModuleEditor\ModuleEditor\ModuleEditor\obj\x86\Debug\ModuleEditor.csproj.GenerateResource.Cache
+C:\Users\David\Documents\Visual Studio 2015\Projects\ModuleEditor\ModuleEditor\ModuleEditor\bin\x86\Debug\Content\BlankTile.xnb
+C:\Users\David\Documents\Visual Studio 2015\Projects\ModuleEditor\ModuleEditor\ModuleEditor\obj\x86\Debug\ModuleEditor.EditorForms.NewModule.resources

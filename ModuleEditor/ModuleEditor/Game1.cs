@@ -8,8 +8,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
-using ShipGameLibrary; 
-
+using ShipGameLibrary;
 
 namespace ModuleEditor
 {
@@ -29,6 +28,7 @@ namespace ModuleEditor
         }
 
         
+
         protected override void Initialize()
         {
             
@@ -39,10 +39,9 @@ namespace ModuleEditor
         
         protected override void LoadContent()
         {
-            
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            
+
         }
 
         
@@ -58,8 +57,6 @@ namespace ModuleEditor
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            
-
             base.Update(gameTime);
         }
 
@@ -67,11 +64,6 @@ namespace ModuleEditor
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
-            //Gui
-            spriteBatch.Begin();
-            
-            spriteBatch.End(); 
 
             base.Draw(gameTime);
         }
