@@ -46,7 +46,8 @@
             this.loadToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1289, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1212, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -75,10 +76,10 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(913, 27);
+            this.listBox1.Location = new System.Drawing.Point(927, 21);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(364, 532);
+            this.listBox1.Size = new System.Drawing.Size(274, 680);
             this.listBox1.TabIndex = 2;
             this.listBox1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.listBox1_DrawItem);
             this.listBox1.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.listBox1_MeasureItem);
@@ -86,21 +87,23 @@
             // 
             // mapDisplay1
             // 
-            this.mapDisplay1.Location = new System.Drawing.Point(12, 31);
+            this.mapDisplay1.Location = new System.Drawing.Point(9, 25);
+            this.mapDisplay1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.mapDisplay1.Name = "mapDisplay1";
-            this.mapDisplay1.Size = new System.Drawing.Size(882, 528);
+            this.mapDisplay1.Size = new System.Drawing.Size(914, 676);
             this.mapDisplay1.TabIndex = 0;
             this.mapDisplay1.Text = "mapDisplay1";
             // 
             // EditorForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1289, 684);
+            this.ClientSize = new System.Drawing.Size(1212, 708);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.mapDisplay1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "EditorForm";
             this.Text = "EditorForm";
             this.Load += new System.EventHandler(this.EditorForm_Load);

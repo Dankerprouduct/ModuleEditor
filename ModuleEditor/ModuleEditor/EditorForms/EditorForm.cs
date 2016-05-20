@@ -11,6 +11,7 @@ namespace ModuleEditor.EditorForms
 {
     public partial class EditorForm : Form
     {
+        public List<ShipGameLibrary.Tile> items = new List<ShipGameLibrary.Tile>();
         public EditorForm()
         {
             InitializeComponent();
@@ -23,9 +24,10 @@ namespace ModuleEditor.EditorForms
 
         }
 
-        public void AddTile(Tile tile)
+        public void AddTile(Tile tile, ShipGameLibrary.Tile ship_Tile)
         {
-            listBox1.Items.Add(tile); 
+            listBox1.Items.Add(tile);
+            items.Add(ship_Tile);
         }
         private int itemMargin = 5;
         private int pictureHeight = 64; 

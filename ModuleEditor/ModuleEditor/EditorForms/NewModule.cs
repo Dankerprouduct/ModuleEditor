@@ -18,7 +18,7 @@ namespace ModuleEditor.EditorForms
 
             InitializeComponent();
             editorForm = form;
-            editorForm.mapDisplay1.populatedList = false; 
+            
             mapDisplay = _mapDisplay;
             textBox1.Text = "5";
             textBox2.Text = "5"; 
@@ -31,6 +31,8 @@ namespace ModuleEditor.EditorForms
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            editorForm.mapDisplay1.populatedList = false;
+          //  editorForm.mapDisplay1.sourceRects = new List<Microsoft.Xna.Framework.Rectangle>(); 
             if (textBox3.Text == string.Empty || textBox4.Text == string.Empty)
             {
                 MessageBox.Show("No File Opened");
@@ -53,7 +55,8 @@ namespace ModuleEditor.EditorForms
             ofd.Filter = "Text Files (.txt)|*.txt"; 
             if(ofd.ShowDialog() == DialogResult.OK)
             {
-                textBox3.Text = ofd.FileName; 
+                textBox3.Text = ofd.FileName;
+                editorForm.mapDisplay1.path = textBox3.Text; 
             }
                         
         }

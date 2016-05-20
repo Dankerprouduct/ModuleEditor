@@ -40,11 +40,13 @@ namespace ModuleEditor.EditorForms
                     {
                         if (flag)
                         {
-                            output += "," + editorForm.mapDisplay1.mapdata[i, j].ToString();
+                           // output += "," + editorForm.mapDisplay1.mapdata[i, j].ToString();
+                            output += "," + getIndex(editorForm.mapDisplay1.mapdata[i, j], i, j); 
                         }
                         else
                         {
-                            output += editorForm.mapDisplay1.mapdata[i, j].ToString();
+                            //output += editorForm.mapDisplay1.mapdata[i, j].ToString();
+                            output += getIndex(editorForm.mapDisplay1.mapdata[i, j], i, j);
                             flag = true;
                         }
                     }
@@ -69,7 +71,23 @@ namespace ModuleEditor.EditorForms
                 textBox1.Text = ofd.FileName;
             }
         }
+        private int getIndex(int index, int x, int y)
+        {
+            Console.WriteLine(editorForm.items.Count()); 
+            for(int i = 0; i < editorForm.items.Count(); i++)
+            {
+                
+                Console.WriteLine(editorForm.items[index].name +" --- " + editorForm.mapDisplay1.tiles[i].name);
 
+                if (editorForm.items[index].name == editorForm.mapDisplay1.tiles[i].name)
+                {
+                    Console.WriteLine("GETEEM");
+                    return editorForm.mapDisplay1.tiles[i].id;
+                }
+            }
+            Console.WriteLine("Failed"); 
+            return 0; 
+        }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 

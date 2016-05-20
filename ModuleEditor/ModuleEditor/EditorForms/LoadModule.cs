@@ -12,7 +12,7 @@ namespace ModuleEditor.EditorForms
 {
     public partial class LoadModule : Form
     {
-        EditorForm editorForm;
+        public EditorForm editorForm;
         public LoadModule(EditorForm form)
         {
             InitializeComponent();
@@ -40,7 +40,7 @@ namespace ModuleEditor.EditorForms
             }
             try {
                 string path = textBox1.Text;
-
+                editorForm.mapDisplay1.path = textBox1.Text;
                 // Width and height of our tile array
                 int width = 0;
                 int height = File.ReadLines(path).Count();

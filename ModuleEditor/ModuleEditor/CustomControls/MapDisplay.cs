@@ -25,11 +25,13 @@ namespace ModuleEditor.CustomControls
         Texture2D blankTile;
         Texture2D spriteSheet; 
         Stopwatch timer;
+        public string path; 
         EditorForms.EditorForm editorform;
         int index = 0;
         public int[,] mapdata;
-        List<Microsoft.Xna.Framework.Rectangle> sourceRects = new List<Microsoft.Xna.Framework.Rectangle>(); 
-        public bool populatedList = false; 
+        public List<Microsoft.Xna.Framework.Rectangle> sourceRects = new List<Microsoft.Xna.Framework.Rectangle>(); 
+        public bool populatedList = false;
+        public ShipGameLibrary.Tile[] tiles; 
         protected override void Initialize()
         {
             content = new ContentManager(Services, "Content");
@@ -74,8 +76,9 @@ namespace ModuleEditor.CustomControls
             int height = File.ReadLines(path).Count();
 
             char[] splits = { '=', ' ' };
-
-            ShipGameLibrary.Tile[] tiles = content.Load<ShipGameLibrary.Tile[]>("Xml/Tile");
+            sourceRects = null;
+            sourceRects = new List<Microsoft.Xna.Framework.Rectangle>(); 
+            tiles = content.Load<ShipGameLibrary.Tile[]>("Xml/Tile");
             spriteSheet = ConvertToTexture(new Bitmap(pngPath), GraphicsDevice); 
             for (int y = 0; y < height; y++)
             {
@@ -89,7 +92,8 @@ namespace ModuleEditor.CustomControls
                         if (tiles[i].name == s)
                         {
                             sourceRects.Add(new Microsoft.Xna.Framework.Rectangle(Convert.ToInt32(rectData[3]), Convert.ToInt32(rectData[4]), Convert.ToInt32(rectData[5]), Convert.ToInt32(rectData[6])));
-                            form.AddTile(new EditorForms.Tile(s, new Bitmap(pngPath), new RectangleF(Convert.ToInt32(rectData[3]), Convert.ToInt32(rectData[4]), Convert.ToInt32(rectData[5]), Convert.ToInt32(rectData[6]))));
+                            form.AddTile(new EditorForms.Tile(s, new Bitmap(pngPath), new RectangleF(Convert.ToInt32(rectData[3]), Convert.ToInt32(rectData[4]), Convert.ToInt32(rectData[5]), Convert.ToInt32(rectData[6]))), tiles[i]);
+
                         }
                     }
 
@@ -133,7 +137,7 @@ namespace ModuleEditor.CustomControls
             {
                 if (mouseState.LeftButton == Microsoft.Xna.Framework.Input.ButtonState.Pressed)
                 {
-                    Console.WriteLine("Pressed"); 
+                   // Console.WriteLine("Pressed"); 
                     if (xCord >= 0 && xCord < mapdata.GetLength(0))
                     {
                         if (yCord >= 0 && yCord < mapdata.GetLength(1))
@@ -157,6 +161,13 @@ namespace ModuleEditor.CustomControls
                 }
             }
             spriteBatch.End(); 
+        }
+
+        public int GetIndex(int i)
+        {
+            return 0; 
+
+            
         }
     }
 }
