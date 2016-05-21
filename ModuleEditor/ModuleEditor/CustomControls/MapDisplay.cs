@@ -79,7 +79,8 @@ namespace ModuleEditor.CustomControls
             sourceRects = null;
             sourceRects = new List<Microsoft.Xna.Framework.Rectangle>(); 
             tiles = content.Load<ShipGameLibrary.Tile[]>("Xml/Tile");
-            spriteSheet = ConvertToTexture(new Bitmap(pngPath), GraphicsDevice); 
+            spriteSheet = ConvertToTexture(new Bitmap(pngPath), GraphicsDevice);
+            form.listBox1.Items.Clear(); 
             for (int y = 0; y < height; y++)
             {
                 string line = sr.ReadLine();
