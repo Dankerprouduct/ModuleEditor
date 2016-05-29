@@ -118,6 +118,21 @@ namespace ModuleEditor.CustomControls
             System.Drawing.Point p = PointToScreen(this.Location);
             return new Vector2(mouseState.X - p.X, mouseState.Y - p.Y);
         }
+        void HotKeys(int index)
+        {
+            KeyboardState keyboardState = Keyboard.GetState();
+
+            if (keyboardState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.F))
+            {
+                for(int x = 0; x < mapdata.GetLength(0); x++)
+                {
+                    for(int y = 0; y < mapdata.GetLength(1); y++)
+                    {
+                        mapdata[x, y] = index; 
+                    }
+                }
+            }
+        }
         protected override void Draw()
         {
             GraphicsDevice.Clear(Microsoft.Xna.Framework.Color.CornflowerBlue);
@@ -154,6 +169,7 @@ namespace ModuleEditor.CustomControls
             spriteBatch.Begin();
             if (populatedList && editorform.listBox1.Items != null)
             {
+                HotKeys(index); 
                 for (int y = 0; y < mapdata.GetLength(1); y++)
                 {
                     for (int x = 0; x < mapdata.GetLength(0); x++)
