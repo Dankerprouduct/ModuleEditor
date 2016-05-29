@@ -56,6 +56,7 @@ namespace ModuleEditor.CustomControls
             width = _width;
             height = _height;
             mapdata = new int[width, height]; 
+            
             for(int x = 0; x < mapdata.GetLength(0); x++)
             {
                 for(int y = 0; y < mapdata.GetLength(1); y++)
@@ -63,7 +64,7 @@ namespace ModuleEditor.CustomControls
                     mapdata[x, y] = 0;
                 }
             }
-            Console.WriteLine(width + " " + height);
+            Console.WriteLine(mapdata.GetLength(0) + " " + mapdata.GetLength(1));
         }
         public void LoadTileMap(string txtPath, string pngPath, EditorForms.EditorForm form)
         {
@@ -155,7 +156,7 @@ namespace ModuleEditor.CustomControls
             {
                 for (int y = 0; y < mapdata.GetLength(1); y++)
                 {
-                    for (int x = 0; y < mapdata.GetLength(0); y++)
+                    for (int x = 0; x < mapdata.GetLength(0); x++)
                     {
                         spriteBatch.Draw(spriteSheet, new Microsoft.Xna.Framework.Rectangle(y * 32, x * 32, 32, 32), sourceRects[mapdata[y, x]], Microsoft.Xna.Framework.Color.White);
                     }
