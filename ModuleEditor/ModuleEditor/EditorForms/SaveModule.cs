@@ -33,20 +33,20 @@ namespace ModuleEditor.EditorForms
                 bool flag = false;
                 StreamWriter streamWriter = new StreamWriter(textBox1.Text);
                 string output = "";
-                for (int i = 0; i < editorForm.mapDisplay1.mapdata.GetLength(0); i++)
+                for (int i = 0; i < editorForm.mapDisplay1.mapdata.GetLength(1); i++)
                 {
                     flag = false;
-                    for (int j = 0; j < editorForm.mapDisplay1.mapdata.GetLength(1); j++)
+                    for (int j = 0; j < editorForm.mapDisplay1.mapdata.GetLength(0); j++)
                     {
                         if (flag)
                         {
                            // output += "," + editorForm.mapDisplay1.mapdata[i, j].ToString();
-                            output += "," + getIndex(editorForm.mapDisplay1.mapdata[i, j], i, j); 
+                            output += "," + getIndex(editorForm.mapDisplay1.mapdata[j, i], i, j); 
                         }
                         else
                         {
                             //output += editorForm.mapDisplay1.mapdata[i, j].ToString();
-                            output += getIndex(editorForm.mapDisplay1.mapdata[i, j], i, j);
+                            output += getIndex(editorForm.mapDisplay1.mapdata[j, i], i, j);
                             flag = true;
                         }
                     }

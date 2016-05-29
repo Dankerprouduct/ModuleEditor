@@ -153,22 +153,16 @@ namespace ModuleEditor.CustomControls
             spriteBatch.Begin();
             if (populatedList && editorform.listBox1.Items != null)
             {
-                for (int x = 0; x < mapdata.GetLength(0); x++)
+                for (int y = 0; y < mapdata.GetLength(1); y++)
                 {
-                    for (int y = 0; y < mapdata.GetLength(1); y++)
+                    for (int x = 0; y < mapdata.GetLength(0); y++)
                     {
-                        spriteBatch.Draw(spriteSheet, new Microsoft.Xna.Framework.Rectangle(x * 32, y * 32, 32, 32), sourceRects[mapdata[x, y]], Microsoft.Xna.Framework.Color.White);
+                        spriteBatch.Draw(spriteSheet, new Microsoft.Xna.Framework.Rectangle(y * 32, x * 32, 32, 32), sourceRects[mapdata[y, x]], Microsoft.Xna.Framework.Color.White);
                     }
                 }
             }
             spriteBatch.End(); 
         }
-
-        public int GetIndex(int i)
-        {
-            return 0; 
-
-            
-        }
+        
     }
 }
